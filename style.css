@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login-box{
+    display: flex;
+    background-color: #A2D5C6;
+    border-radius: 40px;
+    border: 5px solid #fcfcf8;
+    height: 80%;
+    width: 70%;
+    margin: auto;
+}
+.login{
+    display: block;
+    border-radius: 10px;
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    padding: 50px 0 0 0;
+}
+.register{
+    display: none;
+    width: 40%;
+    height: 60%;
+    margin: auto;
+    padding: 50px 0 0 0;
+}
+label{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+input{
+    display: block;
+    width: 100%;
+    height: 10%;
+    margin: 1px auto;
+    padding: 1px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.login-btn{
+    display: block;
+    width: auto;
+    height: 15%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+.login-btn:hover{
+    background-color: aliceblue;
+    color: black;
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+}
+form p{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.pop-up{
+    display: none;
+    position: fixed;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+
+}
+.close-btn{
+    position: relative;
+    width: 10%;
+    height: 10%;
+    margin: 15px;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    border: 0.5px solid white;
+}
+.login-message{
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+}
+.ok-btn{
+    width: 20%;
+    height: 12%;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+}
+.pop-header{
+    background-color: black;
+}
+
+@media screen and (max-width:600px) {
+    .login-box{
+        height: 70%;
+        width: 90%;
+
+    }
+    .login , .register{
+        width: 80%;
+        height: 60%;
+    }
+
+    .login-btn:hover{
+        background-color: aliceblue;
+        color: black;
+        transform: scale(1.1);
+        transition: .5s ease-in-out;
+    }
+
+
+    .pop-up{
+        width: 80%;
+        height: 20%;
+
+    }
+    .close-btn{
+
+        width: 15%;
+        height: 15%;
+        margin: 15px;
+        border-radius: 10px;
+        padding: 5px 5px 5px;
+    }
+    .login-message{
+        font-size: 15px;
+
+    }
+    .ok-btn{
+        display: none;
+        width: 20%;
+        height: 15%;
+        border-radius: 1px;
+
+    }
+
+}
+
+@keyframes closeOut {
+    from{
+        width: 20%;
+    }
+    to{
+        width: 0%;
+        opacity: 0;
+    }
+}
