@@ -7,10 +7,11 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginBox = document.getElementById("login");
 const registerForm = document.getElementById("register");
+const db = document.getElementById("parent-card")
+const logBox = document.getElementById("login-box");
 
 function closeGo(){
     popUpBox.style.display = "none";
-    
 }
 function createAccount(){
     loginBox.style.display = "none";
@@ -30,7 +31,9 @@ function registerAccount(){
     const r_email = document.getElementById("email").value;
     const r_name = document.getElementById("name").value;
 
-    
+    const p1 = document.getElementById("p1");
+    const p2 = document.getElementById("p2");
+    const p3 = document.getElementById("p3");
 
     if (isEmpty(r_name.trim())){
         loginPrompt.innerHTML = "please enter a name!";
@@ -68,6 +71,9 @@ function LoginFunction(){
     if(username.value === un && password.value === pw){
         loginPrompt.innerHTML = "Login Successfully!";
         okBtn.style.display = "block";
+        p1.innerHTML = localStorage.getItem("name");
+        p2.innerHTML = localStorage.getItem("username");
+        p3.innerHTML = localStorage.getItem("email");
     }
     else{
         loginPrompt.innerHTML = "Invalid username or password!";
@@ -77,6 +83,40 @@ function LoginFunction(){
 }
 function okayGo(){
     setTimeout(() => {
-        window.location.href='route/dashboard.html';
+        logBox.style.display = "none";
+        popUpBox.style.display = "none";
+        db.style.display = "grid";
     }, 1000);
 }
+
+
+const logout = document.getElementById("logout");
+
+logout.addEventListener("click", ()=>{
+    logBox.style.display = "block";
+    db.style.display = "none";
+    popUpBox.style.display = "none";
+});
+const inpImg = document.getElementById("up-img")
+const img = document.getElementById("pfp")
+
+inpImg.addEventListener("change", ()=>{
+    const fl = inpImg.files[0];
+    if(fl){
+        img.src = URL.createObjectURL(fl);
+    }
+});
+
+
+const delMyAcc = document.getElementById("delAcc");
+
+delMyAcc.addEventListener("click", ()=>{
+    localStorage.clear();
+    loginPrompt.innerHTML = "Successfully Deleted";
+    popUpBox.style.display = "block";
+    db.style.display = "none";
+    setTimeout(()=>{
+        popUpBox.style.display = "none";
+        logBox.style.display = "block";
+    },3000);
+});

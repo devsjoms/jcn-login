@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
 <body>
-    <div class="login-box">
+    <div class="login-box" id="login-box">
         <form class="register" id="register">
             <label for="name" >Name</label>
             <input type="text" id="name">
@@ -36,6 +36,31 @@
         <h1 class="login-message" id="login-message"></h1>
         <button class="ok-btn" id="ok-btn" onclick="okayGo()">ok</button>
     </div>
+
+
+    <div class="parent-card" id="parent-card">
+        <div class="f-card">
+            <img src="logo/jcn-logo.png" alt="pfp" id="pfp">
+            <input type="file" id="up-img" accept="image/*">
+            <button type="button" id="logout" class="in-btn">logout</button>
+            <button type="button" id="delAcc" class="in-btn">delete my account</button>
+        </div>
+        <div class="s-card">
+            <div class="text-card">
+                <p>name</p>
+                <h1 id="p1"></h1>
+            </div>
+            <div class="text-card">
+                <p>username</p>
+                <h1 id = "p2"></h1>
+            </div>
+            <div class="text-card">
+                <p>email</p>
+                <h1 id="p3"></h1>
+            </div>
+        </div>
+    </div>
+    
 </body>
 <script src="script.js"></script>
 </html>

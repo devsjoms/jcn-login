@@ -14,7 +14,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .login-box{
-    display: flex;
+    display: block;
     background-color: #A2D5C6;
     border-radius: 40px;
     border: 5px solid #fcfcf8;
@@ -28,14 +28,14 @@ body{
     width: 40%;
     height: 50%;
     margin: auto;
-    padding: 50px 0 0 0;
+    padding: 15% 5%;
 }
 .register{
     display: none;
     width: 40%;
     height: 60%;
     margin: auto;
-    padding: 50px 0 0 0;
+    padding: 10% 5%;
 }
 label{
     display: block;
@@ -107,10 +107,58 @@ form p{
     margin: auto;
     margin-top: 10%;
 }
-.pop-header{
-    background-color: black;
+.pop-header{ background-color: black;}
+.parent-card{
+    display: none;
+    width: 90%;
+    height: 90%;
+    background-color: rgb(2, 2, 42);
 }
-
+.f-card{
+    background-color: blanchedalmond;
+    align-items: center;
+    text-align: center;
+}
+.f-card img{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.s-card{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: brown;
+}
+.text-card{
+    background-color: #A2D5C6;
+    margin: auto;
+    font-size: 30px;
+    border-left: 10px solid;
+    border-bottom: 2px solid;
+    border-radius: 5px;
+    width: 30%;
+    height: auto;
+    text-align: left;
+    padding: 5px 10px;
+}
+.text-card h1{
+    margin: 10px 2px;
+    font-size: 30px; }
+.in-btn{
+    text-align: center;
+    display: block;
+    width: auto;
+    height: 5%;
+    padding: 5px 5px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    color: black;
+    margin: 10px;
+    background-color: cadetblue;
+}
+#logout:hover{background-color: aliceblue;}
 @media screen and (max-width:600px) {
     .login-box{
         height: 70%;
@@ -154,9 +202,37 @@ form p{
         border-radius: 1px;
 
     }
-
+    .parent-card{
+        display: none;
+        width: 90%;
+        height: 90%;
+        background-color: rgb(2, 2, 42);
+    }
+    .f-card{
+        background-color: blanchedalmond;
+        align-items: center;
+        text-align: center;
+    }
+    .f-card img{
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 1px solid;
+    }
+    .s-card{
+        display: grid;
+    }
+    .text-card{
+        background-color: #A2D5C6;
+        margin: 5px 4px;
+        width: 90%;
+        height: auto;
+    }
+    .text-card p { font-size: 30px;}
+    .text-card h1{ font-size: 25px; }
+    
 }
-
 @keyframes closeOut {
     from{
         width: 20%;
